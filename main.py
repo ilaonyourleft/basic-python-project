@@ -1,4 +1,5 @@
-from connection.postgresql_connection import connect_to_db
+from connection.postgresql_connection import connect_to_db as postgresql_connect
+from connection.mysql_connection import connect_to_db as mysql_connect
 
 
 def execute_query(conn, query):
@@ -19,10 +20,15 @@ def execute_query(conn, query):
 
 def main():
     # Connect to the database
-    conn = connect_to_db()
+
+    # PostgreSQL
+    # conn = postgresql_connect()
+
+    # MySQL
+    conn = mysql_connect()
 
     # Execute a query
-    query = "SELECT * FROM pg_catalog.pg_tables"
+    query = "show tables;"
     rows = execute_query(conn, query)
 
     # Print the rows
