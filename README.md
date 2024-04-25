@@ -5,6 +5,7 @@
 
 ### Provides the code to connect to
 - PostgreSQL
+- MySQL
 
 ### In order to install psycopg2
 - execute pip install --upgrade setuptools
@@ -13,4 +14,4 @@
 
 ### Test databases
 - PostgreSQL > https://rnacentral.org/help/public-database
-- MySQL > 
+- MySQL > https://docs.rfam.org/en/latest/database.html
